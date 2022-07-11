@@ -110,4 +110,6 @@ class FileworkTest < Minitest::Test
     FileWork.new.write_json(test_hash, 'test_config_json')
     assert_equal JSON.parse(JSON.generate(test_hash)), JSON.parse(IO.read('po_prostu_files/test_config_json.json'))
   end
+
+
 end

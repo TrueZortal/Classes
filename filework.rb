@@ -3,15 +3,15 @@ require 'json'
 class FileWork
 
   class FileError < StandardError
-    puts "No such file exists"
+    "No such file exists"
   end
 
   attr_accessor :folder
 
-  def initialize(input: $stdin, output: $stdout)
+  def initialize(input: $stdin, output: $stdout, folder: 'po_prostu_files')
     @input = input
     @output = output
-    @folder = 'po_prostu_files'
+    @folder = folder
   end
 
   def raw_output(input)
